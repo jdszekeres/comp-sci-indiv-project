@@ -1,59 +1,63 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <title>ECS-Individual Project</title>
-        <link rel="stylesheet" href="styles.css" />
-        <link rel="icon" href="favicon.ico" type="image/x-icon" />
-        
-    </head>
+  <head>
+    <title>ECS-Individual Project</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
 
-    <body>
-        <header>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/goal.html">Set a goal</a>
-                <a href="/log.html">Food log</a>
-            </nav>
-            <h1>Calorie Tracking</h1>
-        </header>
-        <main>
-            <div id="align-completion-circle">
-                <div id="completion-circle">
-                    
-                </div>
-                <div id="overlay"><span id="today_count">2000</span>/<span id="goal">2000</span> cal</div>
-            </div>
+  <body>
+    <header>
+      <nav>
+        <a href="./">Home</a>
+        <a href="./goal.html">Set a goal</a>
+        <a href="./log.html">Food log</a>
+      </nav>
+      <h1>Calorie Tracking</h1>
+    </header>
+    <main>
+      <div id="align-completion-circle">
+        <div id="completion-circle"></div>
+        <div id="overlay">
+          <span id="today_count">2000</span>/<span id="goal">2000</span> cal
+        </div>
+      </div>
 
-            <form action="#">
-                <label for="item_name">Meal Name</label>
-                <input type="text" name="item_name" id="item_name" required>
-                <br>
-                <label for="item_category">Category</label>
-                <select id="item_category" name="item_category">
-                    <option value="reject">Select One</option>
+      <form action="#">
+        <label for="item_name">Meal Name</label>
+        <input type="text" name="item_name" id="item_name" required />
+        <br />
+        <label for="item_category">Category</label>
+        <select id="item_category" name="item_category">
+          <option value="reject">Select One</option>
 
-                    <option value="vegetable">Vegetable</option>
-                    <option value="fruit">Fruit</option>
-                    <option value="grain">Grain</option>
-                    <option value="dairy">Dairy</option>
-                    <option value="protein">Protein</option>
-                    <option value="sugar">Sugary Foods</option>
-                    <option value="other">Other</option>
-                </select>
-                <br>
-                <label for="item_calories">Meal Calories</label>
-                <input type="number" name="item_calories" id="item_calories" required>
-                <br>
-                <input type="button" value="Add" id="submit_button">
-            </form>
-        </main>
-        <footer>
-            <p>&copy;Jackson Szekeres 2025<br>
-                jdszekeres[at]gmail[dot]com<br>
-                <a href="https://jdszekeres.github.io" style="color: inherit; text-decoration:none;">jdszekeres.github.io</a>
-            </p>
-        </footer>
-    </body>
-    <script type="text/javascript" src="index.js" defer></script>
+          <option value="vegetable">Vegetable</option>
+          <option value="fruit">Fruit</option>
+          <option value="grain">Grain</option>
+          <option value="dairy">Dairy</option>
+          <option value="protein">Protein</option>
+          <option value="sugar">Sugary Foods</option>
+          <option value="other">Other</option>
+        </select>
+        <br />
+        <label for="item_calories">Meal Calories</label>
+        <input type="number" name="item_calories" id="item_calories" required />
+        <br />
+        <input type="button" value="Add" id="submit_button" />
+      </form>
+    </main>
+    <footer>
+      <p>
+        &copy;Jackson Szekeres 2025<br />
+        jdszekeres[at]gmail[dot]com<br />
+        <a
+          href="https://jdszekeres.github.io"
+          style="color: inherit; text-decoration: none"
+          >jdszekeres.github.io</a
+        >
+      </p>
+    </footer>
+  </body>
+  <script type="text/javascript" src="index.js" defer></script>
 </html>
