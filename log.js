@@ -1,4 +1,4 @@
-const items = JSON.parse(localStorage.getItem("food")??'[]').reverse()
+const items = JSON.parse(localStorage.getItem("food") ?? '[]').reverse()
 function getImage(category) {
     switch (category) {
         case "vegetable":
@@ -19,20 +19,20 @@ function getImage(category) {
 }
 function remove_log(epoch) {
     var prev_items = structuredClone(items);
-    var new_items = prev_items.filter((data)=>data.date != epoch);
-    localStorage.setItem("food",JSON.stringify(new_items.reverse()));
+    var new_items = prev_items.filter((data) => data.date != epoch);
+    localStorage.setItem("food", JSON.stringify(new_items.reverse()));
     location.reload()
 }
 function createElementFromHTML(htmlString) {
     // https://stackoverflow.com/questions/494143/creating-a-new-dom-element-from-an-html-string-using-built-in-dom-methods-or-pro
     var div = document.createElement('div');
     div.innerHTML = htmlString.trim();
-  
+
     // Change this to div.childNodes to support multiple top-level nodes.
     return div.firstChild;
-  }
+}
 if (items.length === 0) {
-    document.getElementById("items").innerHTML="<span style='font-size: xx-large'>No entries logged</span>"
+    document.getElementById("items").innerHTML = "<span style='font-size: xx-large'>No entries logged</span>"
 }
 for (var i = 0; i < items.length; i++) {
     const item = items[i]
@@ -52,7 +52,7 @@ for (var i = 0; i < items.length; i++) {
     subheader.appendChild(document.createTextNode(text_string))
     subdiv.appendChild(subheader)
     div.appendChild(subdiv)
-    const delete_icon = `<img src="/trash-solid.svg" class="delete-icon" role="button" onclick="remove_log(${item.date})" />`
+    const delete_icon = `<img src="./trash-solid.svg" class="delete-icon" role="button" onclick="remove_log(${item.date})" />`
     // document.createElement("img")
     // delete_icon.className = "delete-icon"
     // delete_icon.src = '/trash-solid.svg'
@@ -67,5 +67,5 @@ for (var i = 0; i < items.length; i++) {
 }
 
 if (items.length % 3 !== 0) {
-    document.getElementById("items").innerHTML += '<div class="log invis"></div>'.repeat(3 - items.length%3);
+    document.getElementById("items").innerHTML += '<div class="log invis"></div>'.repeat(3 - items.length % 3);
 }
